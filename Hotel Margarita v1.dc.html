@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:#FBF7EA;color:#22310f;font-family:'Hanken Grotesk',system-ui,sans-serif;-webkit-font-smoothing:antialiased;}
+  a{text-decoration:none;color:inherit;}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+  @keyframes spinSlow{to{transform:rotate(360deg);}}
+  @keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+  image-slot{display:block;width:100%;height:100%;}
+</style>
+</helmet>
+
+<x-import component-from-global-scope="image-slot" from="./assets/image-slot.js" id="loader-slot" hint-size="1px,1px" style="display:none;position:absolute;"></x-import>
+
+<div style="overflow-x:hidden;">
+
+<!-- ============ NAV ============ -->
+<header style="position:sticky;top:0;z-index:50;background:rgba(251,247,234,0.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(47,143,34,0.18);">
+  <div style="max-width:1240px;margin:0 auto;padding:14px clamp(16px,4vw,40px);display:flex;align-items:center;gap:20px;flex-wrap:wrap;">
+    <a href="#inicio" style="display:flex;align-items:center;gap:12px;flex:0 0 auto;">
+      <svg viewBox="0 0 100 100" width="40" height="40" aria-hidden="true">
+        <g fill="#2f8f22"><ellipse cx="50" cy="23" rx="6" ry="19"></ellipse><ellipse cx="50" cy="23" rx="6" ry="19" transform="rotate(30 50 50)"></ellipse><ellipse cx="50" cy="23" rx="6" ry="19" transform="rotate(60 50 50)"></ellipse><ellipse cx="50" cy="23" rx="6" ry="19" transform="rotate(90 50 50)"></ellipse><ellipse cx="50" cy="23" rx="6" ry="19" transform="rotate(120 50 50)"></ellipse><ellipse cx="50" cy="23" rx="6" ry="19" transform="rotate(150 50 50)"></ellipse><ellipse cx="50" cy="23" rx="6" ry="19" transform="rotate(180 50 50)"></ellipse><ellipse cx="50" cy="23" rx="6" ry="19" transform="rotate(210 50 50)"></ellipse><ellipse cx="50" cy="23" rx="6" ry="19" transform="rotate(240 50 50)"></ellipse><ellipse cx="50" cy="23" rx="6" ry="19" transform="rotate(270 50 50)"></ellipse><ellipse cx="50" cy="23" rx="6" ry="19" transform="rotate(300 50 50)"></ellipse><ellipse cx="50" cy="23" rx="6" ry="19" transform="rotate(330 50 50)"></ellipse></g>
+        <circle cx="50" cy="50" r="13" fill="#2f8f22"></circle><circle cx="50" cy="50" r="9" fill="#FFCE1F"></circle>
+      </svg>
+      <span style="font-family:'Cormorant Garamond',serif;font-weight:700;font-size:24px;line-height:1;color:#1d4d18;letter-spacing:0.5px;">Hotel Margarita</span>
+    </a>
+    <nav style="display:flex;align-items:center;gap:22px;margin-left:auto;flex-wrap:wrap;font-weight:500;font-size:15px;color:#2c4019;">
+      <a href="#habitaciones" style-hover="color:#2f8f22;">Habitaciones</a>
+      <a href="#servicios" style-hover="color:#2f8f22;">Servicios</a>
+      <a href="#galeria" style-hover="color:#2f8f22;">Galería</a>
+      <a href="#tonina" style-hover="color:#2f8f22;">Toniná</a>
+      <a href="#queso" style-hover="color:#2f8f22;">Queso Bola</a>
+      <a href="Restaurante.dc.html" style-hover="color:#2f8f22;">Restaurante</a>
+      <a href="#contacto" style-hover="color:#2f8f22;">Contacto</a>
+      <a href="#reservar" style="background:#FFCE1F;color:#1d4d18;font-weight:700;padding:10px 22px;border-radius:999px;box-shadow:0 4px 14px rgba(47,143,34,0.18);" style-hover="background:#ffd84d;transform:translateY(-1px);">Reservar</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section id="inicio" style="position:relative;background:#1d4d18;color:#FBF7EA;overflow:hidden;">
+  <svg viewBox="0 0 100 100" width="640" height="640" aria-hidden="true" style="position:absolute;top:-180px;right:-160px;opacity:0.07;animation:spinSlow 90s linear infinite;">
+    <g fill="#ffffff"><ellipse cx="50" cy="23" rx="6" ry="19"></ellipse><ellipse cx="50" cy="23" rx="6" ry="19" transform="rotate(30 50 50)"></ellipse><ellipse cx="50" cy="23" rx="6" ry="19" transform="rotate(60 50 50)"></ellipse><ellipse cx="50" cy="23" rx="6" ry="19" transform="rotate(90 50 50)"></ellipse><ellipse cx="50" cy="23" rx="6" ry="19" transform="rotate(120 50 50)"></ellipse><ellipse cx="50" cy="23" rx="6" ry="19" transform="rotate(150 50 50)"></ellipse><ellipse cx="50" cy="23" rx="6" ry="19" transform="rotate(180 50 50)"></ellipse><ellipse cx="50" cy="23" rx="6" ry="19" transform="rotate(210 50 50)"></ellipse><ellipse cx="50" cy="23" rx="6" ry="19" transform="rotate(240 50 50)"></ellipse><ellipse cx="50" cy="23" rx="6" ry="19" transform="rotate(270 50 50)"></ellipse><ellipse cx="50" cy="23" rx="6" ry="19" transform="rotate(300 50 50)"></ellipse><ellipse cx="50" cy="23" rx="6" ry="19" transform="rotate(330 50 50)"></ellipse></g>
+    <circle cx="50" cy="50" r="13" fill="#FFCE1F"></circle>
+  </svg>
+  <div style="max-width:1240px;margin:0 auto;padding:clamp(48px,7vw,96px) clamp(16px,4vw,40px);display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(32px,5vw,64px);align-items:center;position:relative;">
+    <div style="animation:fadeUp 0.9s ease both;">
+      <p style="display:inline-flex;align-items:center;gap:8px;font-size:13px;letter-spacing:3px;text-transform:uppercase;color:#FFD84D;font-weight:600;margin:0 0 22px;">
+        <span style="width:26px;height:1px;background:#FFD84D;display:inline-block;"></span>Ocosingo · Chiapas
+      </p>
+      <img src="assets/logo-blanco.png" alt="Hotel Margarita" style="width:min(440px,86%);display:block;margin:0 0 10px -8px;filter:drop-shadow(0 8px 22px rgba(0,0,0,0.35));">
+      <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(20px,2.6vw,28px);color:#FFCE1F;margin:0 0 14px;">“Permítanos atenderle como si estuviera en casa”</p>
+      <p style="font-size:17px;line-height:1.7;color:rgba(251,247,234,0.85);max-width:440px;margin:0 0 34px;">Un hotel tradicional y acogedor en el corazón de Ocosingo. Habitaciones cómodas, atención cálida y todo lo que necesita para descansar como en casa.</p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;">
+        <a href="#reservar" style="background:#FFCE1F;color:#1d4d18;font-weight:700;padding:15px 30px;border-radius:999px;font-size:16px;box-shadow:0 8px 24px rgba(0,0,0,0.25);" style-hover="background:#ffd84d;transform:translateY(-2px);">Reservar ahora</a>
+        <a href="https://wa.me/5219191093359" target="_blank" style="border:1.5px solid rgba(251,247,234,0.5);color:#FBF7EA;font-weight:600;padding:15px 28px;border-radius:999px;font-size:16px;display:inline-flex;align-items:center;gap:9px;" style-hover="background:rgba(251,247,234,0.1);border-color:#FBF7EA;">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.8 14.04c-.24.68-1.42 1.31-1.96 1.36-.5.05-1.14.07-1.84-.12-.42-.13-.97-.31-1.67-.61-2.94-1.27-4.86-4.23-5.01-4.43-.15-.2-1.2-1.6-1.2-3.05s.76-2.16 1.03-2.46c.27-.3.59-.37.79-.37.2 0 .39.002.56.01.18.008.42-.07.66.5.24.58.82 2 .89 2.15.07.15.12.32.02.51-.1.2-.15.32-.3.49-.15.18-.31.39-.44.53-.15.15-.3.31-.13.6.17.3.76 1.25 1.63 2.02 1.12.99 2.06 1.3 2.36 1.45.3.15.47.12.65-.07.18-.2.75-.87.95-1.17.2-.3.4-.25.66-.15.27.1 1.7.8 1.99.95.3.15.5.22.57.34.07.12.07.7-.17 1.38z"></path></svg>
+          WhatsApp
+        </a>
+      </div>
+    </div>
+    <div style="position:relative;animation:fadeUp 1.1s ease both;">
+      <div style="background:#FBF7EA;padding:14px;border-radius:6px;box-shadow:0 30px 60px rgba(0,0,0,0.35);transform:rotate(-1.5deg);">
+        <img src="assets/edificio.png" alt="Fachada del Hotel Margarita en Ocosingo" style="width:100%;height:clamp(300px,42vw,460px);object-fit:cover;border-radius:3px;display:block;">
+        <p style="font-family:'Cormorant Garamond',serif;font-style:italic;text-align:center;color:#5c6b3f;margin:12px 0 6px;font-size:18px;">Nuestra casa en Ocosingo, Chiapas</p>
+      </div>
+      <div style="position:absolute;bottom:-26px;left:-26px;background:#2f8f22;color:#fff;padding:18px 22px;border-radius:6px;box-shadow:0 16px 30px rgba(0,0,0,0.25);transform:rotate(2deg);">
+        <p style="margin:0;font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:700;line-height:1;">24 hrs</p>
+        <p style="margin:4px 0 0;font-size:12px;letter-spacing:1px;text-transform:uppercase;opacity:0.85;">Recepción abierta</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BIENVENIDA ============ -->
+
+
+<!-- ============ HABITACIONES ============ -->
+<section style="max-width:1000px;margin:0 auto;padding:clamp(64px,9vw,110px) clamp(16px,4vw,40px);text-align:center;">
+  <svg viewBox="0 0 100 100" width="48" height="48" aria-hidden="true" style="margin:0 auto 22px;display:block;">
+    <g fill="#2f8f22"><ellipse cx="50" cy="23" rx="6" ry="19"></ellipse><ellipse cx="50" cy="23" rx="6" ry="19" transform="rotate(30 50 50)"></ellipse><ellipse cx="50" cy="23" rx="6" ry="19" transform="rotate(60 50 50)"></ellipse><ellipse cx="50" cy="23" rx="6" ry="19" transform="rotate(90 50 50)"></ellipse><ellipse cx="50" cy="23" rx="6" ry="19" transform="rotate(120 50 50)"></ellipse><ellipse cx="50" cy="23" rx="6" ry="19" transform="rotate(150 50 50)"></ellipse><ellipse cx="50" cy="23" rx="6" ry="19" transform="rotate(180 50 50)"></ellipse><ellipse cx="50" cy="23" rx="6" ry="19" transform="rotate(210 50 50)"></ellipse><ellipse cx="50" cy="23" rx="6" ry="19" transform="rotate(240 50 50)"></ellipse><ellipse cx="50" cy="23" rx="6" ry="19" transform="rotate(270 50 50)"></ellipse><ellipse cx="50" cy="23" rx="6" ry="19" transform="rotate(300 50 50)"></ellipse><ellipse cx="50" cy="23" rx="6" ry="19" transform="rotate(330 50 50)"></ellipse></g>
+    <circle cx="50" cy="50" r="13" fill="#2f8f22"></circle><circle cx="50" cy="50" r="9" fill="#FFCE1F"></circle>
+  </svg>
+  <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(30px,4.5vw,48px);line-height:1.1;color:#1d4d18;margin:0 0 22px;">Más que un hotel… es como estar en casa</h2><p style="font-size:18px;line-height:1.85;color:#445033;max-width:680px;margin:0 auto;">¿Su viaje es por placer, diversión o trabajo? Permítanos convertirlo en una experiencia inolvidable. Disfrute de instalaciones limpias, habitaciones cómodas y confortables, y un trato familiar que hará de su estancia un verdadero descanso. <strong style="color:#2f8f22;">Pregunte por nuestra tarifa especial para grupos.</strong></p>
+  
+</section><section id="habitaciones" style="background:#ffffff;border-top:1px solid rgba(47,143,34,0.12);">
+  <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,100px) clamp(16px,4vw,40px);">
+    <div style="text-align:center;margin-bottom:46px;">
+      <p style="font-size:13px;letter-spacing:3px;text-transform:uppercase;color:#2f8f22;font-weight:600;margin:0 0 10px;">Descanse a gusto</p>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(30px,4.5vw,48px);color:#1d4d18;margin:0;">Nuestras habitaciones</h2>
+    </div>
+    <div style="position:relative;background:#FBF7EA;border:1px solid rgba(47,143,34,0.14);border-radius:16px;overflow:hidden;box-shadow:0 16px 40px rgba(0,0,0,0.06);">
+      <div style="overflow:hidden;">
+        <div style="{{ habTrack }}">
+          <!-- Slide 1 -->
+          <div style="flex:0 0 100%;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));">
+            <image-slot id="hab-sencilla" shape="rect" placeholder="Foto habitación sencilla" style="min-height:340px;"></image-slot>
+            <div style="padding:clamp(28px,4vw,48px);display:flex;flex-direction:column;justify-content:center;">
+              <p style="font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#2f8f22;font-weight:600;margin:0 0 8px;">Para uno</p>
+              <h3 style="font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:700;color:#1d4d18;margin:0 0 12px;">Habitación Sencilla</h3>
+              <p style="font-size:16px;line-height:1.7;color:#5c6b3f;margin:0 0 20px;">Una cama individual, ideal para viajeros de trabajo. Cómoda, limpia y con todo lo necesario para una buena noche de descanso.</p>
+              <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px;">
+                <span style="background:#eef3e4;color:#2f6b1e;font-size:13px;font-weight:600;padding:6px 13px;border-radius:999px;">WiFi</span>
+                <span style="background:#eef3e4;color:#2f6b1e;font-size:13px;font-weight:600;padding:6px 13px;border-radius:999px;">Agua caliente</span>
+                <span style="background:#eef3e4;color:#2f6b1e;font-size:13px;font-weight:600;padding:6px 13px;border-radius:999px;">T.V. por cable</span>
+                <span style="background:#eef3e4;color:#2f6b1e;font-size:13px;font-weight:600;padding:6px 13px;border-radius:999px;">Ventilador / A.C.</span>
+                <span style="background:#eef3e4;color:#2f6b1e;font-size:13px;font-weight:600;padding:6px 13px;border-radius:999px;">Baño privado</span>
+              </div>
+              <a href="#reservar" style="align-self:flex-start;background:#2f8f22;color:#fff;font-weight:700;padding:13px 26px;border-radius:999px;font-size:15px;" style-hover="background:#267a1c;">Reservar esta habitación</a>
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div style="flex:0 0 100%;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));">
+            <image-slot id="hab-doble" shape="rect" placeholder="Foto habitación doble" style="min-height:340px;"></image-slot>
+            <div style="padding:clamp(28px,4vw,48px);display:flex;flex-direction:column;justify-content:center;">
+              <p style="font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#2f8f22;font-weight:600;margin:0 0 8px;">Hasta dos</p>
+              <h3 style="font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:700;color:#1d4d18;margin:0 0 12px;">Habitación Doble</h3>
+              <p style="font-size:16px;line-height:1.7;color:#5c6b3f;margin:0 0 20px;">Dos camas individuales, perfecta para compañeros de viaje o amigos. Espacio amplio y confortable para descansar tras un día de trabajo o turismo.</p>
+              <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px;">
+                <span style="background:#eef3e4;color:#2f6b1e;font-size:13px;font-weight:600;padding:6px 13px;border-radius:999px;">2 camas</span>
+                <span style="background:#eef3e4;color:#2f6b1e;font-size:13px;font-weight:600;padding:6px 13px;border-radius:999px;">WiFi</span>
+                <span style="background:#eef3e4;color:#2f6b1e;font-size:13px;font-weight:600;padding:6px 13px;border-radius:999px;">Agua caliente</span>
+                <span style="background:#eef3e4;color:#2f6b1e;font-size:13px;font-weight:600;padding:6px 13px;border-radius:999px;">T.V. por cable</span>
+                <span style="background:#eef3e4;color:#2f6b1e;font-size:13px;font-weight:600;padding:6px 13px;border-radius:999px;">Ventilador / A.C.</span>
+              </div>
+              <a href="#reservar" style="align-self:flex-start;background:#2f8f22;color:#fff;font-weight:700;padding:13px 26px;border-radius:999px;font-size:15px;" style-hover="background:#267a1c;">Reservar esta habitación</a>
+            </div>
+          </div>
+          <!-- Slide 3 -->
+          <div style="flex:0 0 100%;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));">
+            <image-slot id="hab-matrimonial" shape="rect" placeholder="Foto habitación matrimonial" style="min-height:340px;"></image-slot>
+            <div style="padding:clamp(28px,4vw,48px);display:flex;flex-direction:column;justify-content:center;">
+              <p style="font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#2f8f22;font-weight:600;margin:0 0 8px;">Para parejas</p>
+              <h3 style="font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:700;color:#1d4d18;margin:0 0 12px;">Habitación Matrimonial</h3>
+              <p style="font-size:16px;line-height:1.7;color:#5c6b3f;margin:0 0 20px;">Una cama matrimonial en un ambiente cálido y acogedor. Ideal para parejas que buscan comodidad y tranquilidad durante su estancia.</p>
+              <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px;">
+                <span style="background:#eef3e4;color:#2f6b1e;font-size:13px;font-weight:600;padding:6px 13px;border-radius:999px;">Cama matrimonial</span>
+                <span style="background:#eef3e4;color:#2f6b1e;font-size:13px;font-weight:600;padding:6px 13px;border-radius:999px;">WiFi</span>
+                <span style="background:#eef3e4;color:#2f6b1e;font-size:13px;font-weight:600;padding:6px 13px;border-radius:999px;">Agua caliente</span>
+                <span style="background:#eef3e4;color:#2f6b1e;font-size:13px;font-weight:600;padding:6px 13px;border-radius:999px;">T.V. por cable</span>
+                <span style="background:#eef3e4;color:#2f6b1e;font-size:13px;font-weight:600;padding:6px 13px;border-radius:999px;">Ventilador / A.C.</span>
+              </div>
+              <a href="#reservar" style="align-self:flex-start;background:#2f8f22;color:#fff;font-weight:700;padding:13px 26px;border-radius:999px;font-size:15px;" style-hover="background:#267a1c;">Reservar esta habitación</a>
+            </div>
+          </div>
+          <!-- Slide 4 -->
+          <div style="flex:0 0 100%;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));">
+            <image-slot id="hab-grupos" shape="rect" placeholder="Foto habitación familiar" style="min-height:340px;"></image-slot>
+            <div style="padding:clamp(28px,4vw,48px);display:flex;flex-direction:column;justify-content:center;">
+              <p style="font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#2f8f22;font-weight:600;margin:0 0 8px;">Familias y grupos</p>
+              <h3 style="font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:700;color:#1d4d18;margin:0 0 12px;">Habitación Familiar</h3>
+              <p style="font-size:16px;line-height:1.7;color:#5c6b3f;margin:0 0 20px;">Varias camas para familias o grupos de viaje. <strong style="color:#2f8f22;">Pregunte por nuestra tarifa especial para grupos</strong> y organice su estancia con todo el espacio que necesita.</p>
+              <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px;">
+                <span style="background:#fff3c9;color:#9a7b00;font-size:13px;font-weight:600;padding:6px 13px;border-radius:999px;">Tarifa para grupos</span>
+                <span style="background:#eef3e4;color:#2f6b1e;font-size:13px;font-weight:600;padding:6px 13px;border-radius:999px;">Varias camas</span>
+                <span style="background:#eef3e4;color:#2f6b1e;font-size:13px;font-weight:600;padding:6px 13px;border-radius:999px;">WiFi</span>
+                <span style="background:#eef3e4;color:#2f6b1e;font-size:13px;font-weight:600;padding:6px 13px;border-radius:999px;">Agua caliente</span>
+              </div>
+              <a href="#reservar" style="align-self:flex-start;background:#2f8f22;color:#fff;font-weight:700;padding:13px 26px;border-radius:999px;font-size:15px;" style-hover="background:#267a1c;">Consultar disponibilidad</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- arrows -->
+      <button onClick="{{ prevHab }}" aria-label="Anterior" style="position:absolute;top:calc(50% - 22px);left:14px;width:44px;height:44px;border-radius:50%;border:none;background:rgba(255,255,255,0.92);box-shadow:0 4px 14px rgba(0,0,0,0.18);cursor:pointer;display:flex;align-items:center;justify-content:center;color:#1d4d18;" style-hover="background:#fff;">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"></path></svg>
+      </button>
+      <button onClick="{{ nextHab }}" aria-label="Siguiente" style="position:absolute;top:calc(50% - 22px);right:14px;width:44px;height:44px;border-radius:50%;border:none;background:rgba(255,255,255,0.92);box-shadow:0 4px 14px rgba(0,0,0,0.18);cursor:pointer;display:flex;align-items:center;justify-content:center;color:#1d4d18;" style-hover="background:#fff;">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg>
+      </button>
+    </div>
+    <!-- dots -->
+    <div style="display:flex;justify-content:center;gap:9px;margin-top:22px;">
+      <button onClick="{{ goHab0 }}" aria-label="1" style="{{ habDot0 }}"></button>
+      <button onClick="{{ goHab1 }}" aria-label="2" style="{{ habDot1 }}"></button>
+      <button onClick="{{ goHab2 }}" aria-label="3" style="{{ habDot2 }}"></button>
+      <button onClick="{{ goHab3 }}" aria-label="4" style="{{ habDot3 }}"></button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICIOS (carrusel giratorio) ============ -->
+<section id="servicios" style="background:#ffffff;color:#22310f;overflow:hidden;border-top:1px solid rgba(47,143,34,0.12);border-bottom:1px solid rgba(47,143,34,0.12);">
+  <div style="max-width:1240px;margin:0 auto;padding:clamp(56px,8vw,100px) 0;">
+    <div style="text-align:center;margin-bottom:44px;padding:0 clamp(16px,4vw,40px);">
+      <p style="font-size:13px;letter-spacing:3px;text-transform:uppercase;color:#2f8f22;font-weight:600;margin:0 0 10px;">Durante su estancia</p>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(30px,4.5vw,48px);color:#1d4d18;margin:0;">Nuestros servicios</h2>
+    </div>
+    <!-- featured -->
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;margin:0 clamp(16px,4vw,40px) 40px;">
+      <div style="background:#f4f8ed;border:1px solid rgba(47,143,34,0.16);border-radius:12px;padding:32px;display:flex;gap:20px;align-items:center;">
+        <div style="flex:0 0 auto;width:64px;height:64px;border-radius:50%;background:#FFCE1F;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1d4d18" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"></rect><path d="M9 17V7h4a3 3 0 0 1 0 6H9"></path></svg></div>
+        <div><h3 style="margin:0 0 6px;font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;color:#1d4d18;">Amplio estacionamiento</h3><p style="margin:0;font-size:14px;line-height:1.5;color:#5c6b3f;">Espacio seguro y cómodo para su vehículo dentro del hotel.</p></div>
+      </div>
+      <div style="background:#f4f8ed;border:1px solid rgba(47,143,34,0.16);border-radius:12px;padding:32px;display:flex;gap:20px;align-items:center;">
+        <div style="flex:0 0 auto;width:64px;height:64px;border-radius:50%;background:#FFCE1F;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1d4d18" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg></div>
+        <div><h3 style="margin:0 0 6px;font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;color:#1d4d18;">Recepción 24 horas</h3><p style="margin:0;font-size:14px;line-height:1.5;color:#5c6b3f;">Le atendemos a cualquier hora, llegue cuando llegue.</p></div>
+      </div>
+    </div>
+    <!-- rotating marquee -->
+    <div style="position:relative;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);">
+      <div style="display:flex;gap:18px;width:max-content;animation:marquee 38s linear infinite;padding:6px 0;" style-hover="animation-play-state:paused;">
+        <div style="flex:0 0 auto;width:150px;text-align:center;"><div style="width:74px;height:74px;border-radius:50%;background:#2f8f22;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;box-shadow:0 8px 20px rgba(0,0,0,0.25);"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"></path></svg></div><p style="margin:0;font-weight:600;font-size:14px;color:#22310f;">Agua caliente</p></div>
+        <div style="flex:0 0 auto;width:150px;text-align:center;"><div style="width:74px;height:74px;border-radius:50%;background:#FFCE1F;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;box-shadow:0 8px 20px rgba(0,0,0,0.25);"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#1d4d18" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5a10 10 0 0 1 14 0"></path><path d="M8.5 16a5 5 0 0 1 7 0"></path><circle cx="12" cy="19" r="1"></circle></svg></div><p style="margin:0;font-weight:600;font-size:14px;color:#22310f;">WiFi en todo el hotel</p></div>
+        <div style="flex:0 0 auto;width:150px;text-align:center;"><div style="width:74px;height:74px;border-radius:50%;background:#2f8f22;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;box-shadow:0 8px 20px rgba(0,0,0,0.25);"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="13" rx="2"></rect><path d="M8 21h8"></path></svg></div><p style="margin:0;font-weight:600;font-size:14px;color:#22310f;">T.V. por cable</p></div>
+        <div style="flex:0 0 auto;width:150px;text-align:center;"><div style="width:74px;height:74px;border-radius:50%;background:#FFCE1F;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;box-shadow:0 8px 20px rgba(0,0,0,0.25);"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#1d4d18" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"></circle><path d="M12 8v4l2.5 1.5M5 4 2 7M22 7l-3-3"></path></svg></div><p style="margin:0;font-weight:600;font-size:14px;color:#22310f;">Servicio de despertador</p></div>
+        <div style="flex:0 0 auto;width:150px;text-align:center;"><div style="width:74px;height:74px;border-radius:50%;background:#2f8f22;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;box-shadow:0 8px 20px rgba(0,0,0,0.25);"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.5"></circle><path d="M12 9.5c1.5-4 5-5 6-3s-1 4-4 4M12 14.5c-1.5 4-5 5-6 3s1-4 4-4M14.5 12c4-1.5 5-5 3-6s-4 1-4 4M9.5 12c-4 1.5-5 5-3 6s4-1 4-4"></path></svg></div><p style="margin:0;font-weight:600;font-size:14px;color:#22310f;">Ventilador de techo</p></div>
+        <div style="flex:0 0 auto;width:150px;text-align:center;"><div style="width:74px;height:74px;border-radius:50%;background:#FFCE1F;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;box-shadow:0 8px 20px rgba(0,0,0,0.25);"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#1d4d18" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M4 7l16 10M20 7L4 17"></path></svg></div><p style="margin:0;font-weight:600;font-size:14px;color:#22310f;">Aire acondicionado</p></div>
+        <div style="flex:0 0 auto;width:150px;text-align:center;"><div style="width:74px;height:74px;border-radius:50%;background:#2f8f22;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;box-shadow:0 8px 20px rgba(0,0,0,0.25);"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 11l1.5-4.5A2 2 0 0 1 8.4 5h7.2a2 2 0 0 1 1.9 1.5L19 11"></path><path d="M3 11h18v5h-1v2h-2v-2H7v2H5v-2H4z"></path><circle cx="7.5" cy="14" r="1"></circle><circle cx="16.5" cy="14" r="1"></circle></svg></div><p style="margin:0;font-weight:600;font-size:14px;color:#22310f;">Servicio de taxis</p></div>
+        <div style="flex:0 0 auto;width:150px;text-align:center;"><div style="width:74px;height:74px;border-radius:50%;background:#FFCE1F;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;box-shadow:0 8px 20px rgba(0,0,0,0.25);"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#1d4d18" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18h16M7 18a5 5 0 0 1 10 0M12 13V8M9 8h6"></path><circle cx="12" cy="6.5" r="1"></circle></svg></div><p style="margin:0;font-weight:600;font-size:14px;color:#22310f;">Room service</p></div>
+        <div style="flex:0 0 auto;width:150px;text-align:center;"><div style="width:74px;height:74px;border-radius:50%;background:#2f8f22;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;box-shadow:0 8px 20px rgba(0,0,0,0.25);"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v8a3 3 0 0 0 6 0V3M9 3v18M18 3c-1.5 0-2.5 2-2.5 5s1 4 2.5 4v9"></path></svg></div><p style="margin:0;font-weight:600;font-size:14px;color:#22310f;">Restaurante</p></div>
+        <div style="flex:0 0 auto;width:150px;text-align:center;"><div style="width:74px;height:74px;border-radius:50%;background:#FFCE1F;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;box-shadow:0 8px 20px rgba(0,0,0,0.25);"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#1d4d18" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a4 4 0 0 1 4 4c0 2-2 3-2 6h-4c0-3-2-4-2-6a4 4 0 0 1 4-4z"></path><path d="M9 19h6M10 22h4"></path></svg></div><p style="margin:0;font-weight:600;font-size:14px;color:#22310f;">Lavandería</p></div>
+        <div style="flex:0 0 auto;width:150px;text-align:center;"><div style="width:74px;height:74px;border-radius:50%;background:#2f8f22;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;box-shadow:0 8px 20px rgba(0,0,0,0.25);"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path><circle cx="12" cy="15.5" r="1.3"></circle></svg></div><p style="margin:0;font-weight:600;font-size:14px;color:#22310f;">Caja de seguridad</p></div>
+        <div style="flex:0 0 auto;width:150px;text-align:center;"><div style="width:74px;height:74px;border-radius:50%;background:#FFCE1F;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;box-shadow:0 8px 20px rgba(0,0,0,0.25);"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#1d4d18" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="14" rx="2"></rect><path d="M12 10v6M9 13h6M9 6V4h6v2"></path></svg></div><p style="margin:0;font-weight:600;font-size:14px;color:#22310f;">Consulta médica</p></div>
+        <!-- duplicate set for seamless loop -->
+        <div style="flex:0 0 auto;width:150px;text-align:center;"><div style="width:74px;height:74px;border-radius:50%;background:#2f8f22;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;box-shadow:0 8px 20px rgba(0,0,0,0.25);"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"></path></svg></div><p style="margin:0;font-weight:600;font-size:14px;color:#22310f;">Agua caliente</p></div>
+        <div style="flex:0 0 auto;width:150px;text-align:center;"><div style="width:74px;height:74px;border-radius:50%;background:#FFCE1F;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;box-shadow:0 8px 20px rgba(0,0,0,0.25);"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#1d4d18" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5a10 10 0 0 1 14 0"></path><path d="M8.5 16a5 5 0 0 1 7 0"></path><circle cx="12" cy="19" r="1"></circle></svg></div><p style="margin:0;font-weight:600;font-size:14px;color:#22310f;">WiFi en todo el hotel</p></div>
+        <div style="flex:0 0 auto;width:150px;text-align:center;"><div style="width:74px;height:74px;border-radius:50%;background:#2f8f22;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;box-shadow:0 8px 20px rgba(0,0,0,0.25);"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="13" rx="2"></rect><path d="M8 21h8"></path></svg></div><p style="margin:0;font-weight:600;font-size:14px;color:#22310f;">T.V. por cable</p></div>
+        <div style="flex:0 0 auto;width:150px;text-align:center;"><div style="width:74px;height:74px;border-radius:50%;background:#FFCE1F;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;box-shadow:0 8px 20px rgba(0,0,0,0.25);"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#1d4d18" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"></circle><path d="M12 8v4l2.5 1.5M5 4 2 7M22 7l-3-3"></path></svg></div><p style="margin:0;font-weight:600;font-size:14px;color:#22310f;">Servicio de despertador</p></div>
+        <div style="flex:0 0 auto;width:150px;text-align:center;"><div style="width:74px;height:74px;border-radius:50%;background:#2f8f22;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;box-shadow:0 8px 20px rgba(0,0,0,0.25);"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.5"></circle><path d="M12 9.5c1.5-4 5-5 6-3s-1 4-4 4M12 14.5c-1.5 4-5 5-6 3s1-4 4-4M14.5 12c4-1.5 5-5 3-6s-4 1-4 4M9.5 12c-4 1.5-5 5-3 6s4-1 4-4"></path></svg></div><p style="margin:0;font-weight:600;font-size:14px;color:#22310f;">Ventilador de techo</p></div>
+        <div style="flex:0 0 auto;width:150px;text-align:center;"><div style="width:74px;height:74px;border-radius:50%;background:#FFCE1F;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;box-shadow:0 8px 20px rgba(0,0,0,0.25);"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#1d4d18" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M4 7l16 10M20 7L4 17"></path></svg></div><p style="margin:0;font-weight:600;font-size:14px;color:#22310f;">Aire acondicionado</p></div>
+        <div style="flex:0 0 auto;width:150px;text-align:center;"><div style="width:74px;height:74px;border-radius:50%;background:#2f8f22;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;box-shadow:0 8px 20px rgba(0,0,0,0.25);"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 11l1.5-4.5A2 2 0 0 1 8.4 5h7.2a2 2 0 0 1 1.9 1.5L19 11"></path><path d="M3 11h18v5h-1v2h-2v-2H7v2H5v-2H4z"></path><circle cx="7.5" cy="14" r="1"></circle><circle cx="16.5" cy="14" r="1"></circle></svg></div><p style="margin:0;font-weight:600;font-size:14px;color:#22310f;">Servicio de taxis</p></div>
+        <div style="flex:0 0 auto;width:150px;text-align:center;"><div style="width:74px;height:74px;border-radius:50%;background:#FFCE1F;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;box-shadow:0 8px 20px rgba(0,0,0,0.25);"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#1d4d18" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18h16M7 18a5 5 0 0 1 10 0M12 13V8M9 8h6"></path><circle cx="12" cy="6.5" r="1"></circle></svg></div><p style="margin:0;font-weight:600;font-size:14px;color:#22310f;">Room service</p></div>
+        <div style="flex:0 0 auto;width:150px;text-align:center;"><div style="width:74px;height:74px;border-radius:50%;background:#2f8f22;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;box-shadow:0 8px 20px rgba(0,0,0,0.25);"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v8a3 3 0 0 0 6 0V3M9 3v18M18 3c-1.5 0-2.5 2-2.5 5s1 4 2.5 4v9"></path></svg></div><p style="margin:0;font-weight:600;font-size:14px;color:#22310f;">Restaurante</p></div>
+        <div style="flex:0 0 auto;width:150px;text-align:center;"><div style="width:74px;height:74px;border-radius:50%;background:#FFCE1F;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;box-shadow:0 8px 20px rgba(0,0,0,0.25);"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#1d4d18" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a4 4 0 0 1 4 4c0 2-2 3-2 6h-4c0-3-2-4-2-6a4 4 0 0 1 4-4z"></path><path d="M9 19h6M10 22h4"></path></svg></div><p style="margin:0;font-weight:600;font-size:14px;color:#22310f;">Lavandería</p></div>
+        <div style="flex:0 0 auto;width:150px;text-align:center;"><div style="width:74px;height:74px;border-radius:50%;background:#2f8f22;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;box-shadow:0 8px 20px rgba(0,0,0,0.25);"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path><circle cx="12" cy="15.5" r="1.3"></circle></svg></div><p style="margin:0;font-weight:600;font-size:14px;color:#22310f;">Caja de seguridad</p></div>
+        <div style="flex:0 0 auto;width:150px;text-align:center;"><div style="width:74px;height:74px;border-radius:50%;background:#FFCE1F;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;box-shadow:0 8px 20px rgba(0,0,0,0.25);"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#1d4d18" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="14" rx="2"></rect><path d="M12 10v6M9 13h6M9 6V4h6v2"></path></svg></div><p style="margin:0;font-weight:600;font-size:14px;color:#22310f;">Consulta médica</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALERIA ============ -->
+<section id="galeria" style="max-width:1240px;margin:0 auto;padding:clamp(56px,8vw,100px) clamp(16px,4vw,40px);">
+  <div style="text-align:center;margin-bottom:46px;">
+    <p style="font-size:13px;letter-spacing:3px;text-transform:uppercase;color:#2f8f22;font-weight:600;margin:0 0 10px;">Nuestras instalaciones</p>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(30px,4.5vw,48px);color:#1d4d18;margin:0 0 12px;">Galería</h2>
+    <p style="color:#5c6b3f;font-size:16px;margin:0;">Habitaciones cómodas y confortables, áreas comunes y rincones para descansar.</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));grid-auto-rows:230px;gap:14px;">
+    <div style="grid-column:span 2;grid-row:span 2;border-radius:8px;overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,0.08);">
+      <img src="assets/edificio.png" alt="Fachada Hotel Margarita" style="width:100%;height:100%;object-fit:cover;display:block;">
+    </div>
+    <image-slot id="gal-hab1" shape="rounded" radius="8" placeholder="Arrastra foto de habitación" style="box-shadow:0 8px 24px rgba(0,0,0,0.08);"></image-slot>
+    <image-slot id="gal-hab2" shape="rounded" radius="8" placeholder="Arrastra foto de habitación" style="box-shadow:0 8px 24px rgba(0,0,0,0.08);"></image-slot>
+    <image-slot id="gal-lobby" shape="rounded" radius="8" placeholder="Arrastra foto del lobby" style="box-shadow:0 8px 24px rgba(0,0,0,0.08);"></image-slot>
+    <image-slot id="gal-pasillo" shape="rounded" radius="8" placeholder="Arrastra foto de pasillo" style="box-shadow:0 8px 24px rgba(0,0,0,0.08);"></image-slot>
+    <image-slot id="gal-bano" shape="rounded" radius="8" placeholder="Arrastra foto de baño" style="box-shadow:0 8px 24px rgba(0,0,0,0.08);"></image-slot>
+  </div>
+</section>
+
+<!-- ============ TONINA ============ -->
+<section id="tonina" style="position:relative;background:#eef3e4;color:#22310f;overflow:hidden;">
+  <div style="max-width:1240px;margin:0 auto;padding:clamp(56px,8vw,100px) clamp(16px,4vw,40px);display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(36px,5vw,64px);align-items:center;">
+    <div>
+      <div style="display:flex;align-items:center;gap:14px;margin-bottom:18px;">
+        <svg viewBox="0 0 120 90" width="64" height="48" aria-hidden="true" style="flex:0 0 auto;"><g fill="#2f8f22"><rect x="20" y="74" width="80" height="8" rx="1"></rect><rect x="28" y="62" width="64" height="10" rx="1"></rect><rect x="36" y="50" width="48" height="10" rx="1"></rect><rect x="44" y="38" width="32" height="10" rx="1"></rect><rect x="52" y="28" width="16" height="9" rx="1"></rect></g><rect x="56" y="20" width="8" height="9" fill="#FFCE1F"></rect></svg>
+        <p style="font-size:13px;letter-spacing:3px;text-transform:uppercase;color:#2f8f22;font-weight:600;margin:0;">Qué visitar · Ocosingo</p>
+      </div>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-weight:700;font-size:clamp(32px,5vw,56px);line-height:1;margin:0 0 22px;color:#1d4d18;">Zona arqueológica de Toniná</h2>
+      <p style="font-size:17px;line-height:1.8;color:#445033;margin:0 0 18px;">A pocos minutos del hotel se alza Toniná, una de las grandes ciudades mayas de Chiapas. Su imponente acrópolis se eleva más de 70 metros sobre el valle, escalonada en siete plataformas con templos, plazas y palacios excavados en la ladera.</p>
+      <p style="font-size:17px;line-height:1.8;color:#445033;margin:0 0 26px;">Famosa por sus estelas, esculturas y el célebre Mural de las Cuatro Eras, Toniná fue una potencia militar maya. Una visita imprescindible durante su estancia en Ocosingo.</p>
+      <div style="display:flex;gap:28px;flex-wrap:wrap;">
+        <div><p style="font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:700;color:#2f8f22;margin:0;line-height:1;">+70 m</p><p style="font-size:13px;color:#6b7547;margin:4px 0 0;">de altura</p></div>
+        <div><p style="font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:700;color:#2f8f22;margin:0;line-height:1;">7</p><p style="font-size:13px;color:#6b7547;margin:4px 0 0;">plataformas</p></div>
+        <div><p style="font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:700;color:#2f8f22;margin:0;line-height:1;">≈14 km</p><p style="font-size:13px;color:#6b7547;margin:4px 0 0;">desde el hotel</p></div>
+      </div>
+    </div>
+    <!-- carousel -->
+    <div style="position:relative;">
+      <div style="border-radius:12px;overflow:hidden;box-shadow:0 20px 44px rgba(0,0,0,0.35);">
+        <div style="{{ tonTrack }}">
+          <div style="flex:0 0 100%;position:relative;"><img src="assets/tonina1.png" alt="Vista aérea de Toniná" style="width:100%;height:clamp(300px,38vw,420px);object-fit:cover;display:block;"><span style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.7));color:#fff;font-size:14px;padding:30px 18px 14px;">Vista aérea de la acrópolis</span></div>
+          <div style="flex:0 0 100%;position:relative;"><img src="assets/tonina2.png" alt="Pirámides de Toniná" style="width:100%;height:clamp(300px,38vw,420px);object-fit:cover;display:block;"><span style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.7));color:#fff;font-size:14px;padding:30px 18px 14px;">Las siete plataformas escalonadas</span></div>
+          <div style="flex:0 0 100%;position:relative;"><img src="assets/tonina-estela.png" alt="Estela de Toniná" style="width:100%;height:clamp(300px,38vw,420px);object-fit:cover;display:block;"><span style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.7));color:#fff;font-size:14px;padding:30px 18px 14px;">Estelas y esculturas mayas</span></div>
+          <div style="flex:0 0 100%;position:relative;"><img src="assets/tonina3.png" alt="Visitante en Toniná" style="width:100%;height:clamp(300px,38vw,420px);object-fit:cover;display:block;"><span style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.7));color:#fff;font-size:14px;padding:30px 18px 14px;">Recorra la zona arqueológica</span></div>
+        </div>
+      </div>
+      <button onClick="{{ prevTon }}" aria-label="Anterior" style="position:absolute;top:calc(50% - 22px);left:14px;width:44px;height:44px;border-radius:50%;border:none;background:rgba(255,255,255,0.9);box-shadow:0 4px 14px rgba(0,0,0,0.25);cursor:pointer;display:flex;align-items:center;justify-content:center;color:#1d4d18;" style-hover="background:#fff;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"></path></svg></button>
+      <button onClick="{{ nextTon }}" aria-label="Siguiente" style="position:absolute;top:calc(50% - 22px);right:14px;width:44px;height:44px;border-radius:50%;border:none;background:rgba(255,255,255,0.9);box-shadow:0 4px 14px rgba(0,0,0,0.25);cursor:pointer;display:flex;align-items:center;justify-content:center;color:#1d4d18;" style-hover="background:#fff;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></button>
+      <div style="display:flex;justify-content:center;gap:9px;margin-top:18px;">
+        <button onClick="{{ goTon0 }}" aria-label="1" style="{{ tonDot0 }}"></button>
+        <button onClick="{{ goTon1 }}" aria-label="2" style="{{ tonDot1 }}"></button>
+        <button onClick="{{ goTon2 }}" aria-label="3" style="{{ tonDot2 }}"></button>
+        <button onClick="{{ goTon3 }}" aria-label="4" style="{{ tonDot3 }}"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ QUESO BOLA ============ -->
+<section id="queso" style="background:#FFF7D6;">
+  <div style="max-width:1240px;margin:0 auto;padding:clamp(56px,8vw,100px) clamp(16px,4vw,40px);display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(36px,5vw,64px);align-items:center;">
+    <!-- carousel -->
+    <div style="position:relative;order:2;">
+      <div style="border-radius:12px;overflow:hidden;box-shadow:0 20px 44px rgba(0,0,0,0.15);">
+        <div style="{{ queTrack }}">
+          <div style="flex:0 0 100%;position:relative;"><img src="assets/queso1.png" alt="Queso bola fresco de Ocosingo" style="width:100%;height:clamp(300px,38vw,420px);object-fit:cover;display:block;"><span style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.65));color:#fff;font-size:14px;padding:30px 18px 14px;">Queso bola fresco, listo para llevar</span></div>
+          <div style="flex:0 0 100%;position:relative;"><img src="assets/queso2.png" alt="Queso bola partido en tabla" style="width:100%;height:clamp(300px,38vw,420px);object-fit:cover;display:block;"><span style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.65));color:#fff;font-size:14px;padding:30px 18px 14px;">Corteza firme y corazón cremoso</span></div>
+          <div style="flex:0 0 100%;position:relative;background:#1d4d18;"><img src="assets/ruta-queso-mapa.png" alt="Mapa de la Ruta del Queso de Bola de Ocosingo" style="width:100%;height:clamp(300px,38vw,420px);object-fit:contain;display:block;"><span style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.65));color:#fff;font-size:14px;padding:30px 18px 14px;">Mapa de la Ruta del Queso de Bola</span></div>
+        </div>
+      </div>
+      <button onClick="{{ prevQue }}" aria-label="Anterior" style="position:absolute;top:calc(50% - 22px);left:14px;width:44px;height:44px;border-radius:50%;border:none;background:rgba(255,255,255,0.95);box-shadow:0 4px 14px rgba(0,0,0,0.2);cursor:pointer;display:flex;align-items:center;justify-content:center;color:#1d4d18;" style-hover="background:#fff;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"></path></svg></button>
+      <button onClick="{{ nextQue }}" aria-label="Siguiente" style="position:absolute;top:calc(50% - 22px);right:14px;width:44px;height:44px;border-radius:50%;border:none;background:rgba(255,255,255,0.95);box-shadow:0 4px 14px rgba(0,0,0,0.2);cursor:pointer;display:flex;align-items:center;justify-content:center;color:#1d4d18;" style-hover="background:#fff;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></button>
+      <div style="display:flex;justify-content:center;gap:9px;margin-top:18px;">
+        <button onClick="{{ goQue0 }}" aria-label="1" style="{{ queDot0 }}"></button>
+        <button onClick="{{ goQue1 }}" aria-label="2" style="{{ queDot1 }}"></button>
+        <button onClick="{{ goQue2 }}" aria-label="3" style="{{ queDot2 }}"></button>
+      </div>
+    </div>
+    <div style="order:1;">
+      <div style="display:flex;align-items:center;gap:14px;margin-bottom:18px;">
+        <svg viewBox="0 0 80 80" width="56" height="56" aria-hidden="true" style="flex:0 0 auto;"><circle cx="38" cy="42" r="30" fill="#f6d873" stroke="#e3b53c" stroke-width="2"></circle><path d="M38 42 L66 32 A30 30 0 0 0 56 16 Z" fill="#fcefb8" stroke="#e3b53c" stroke-width="1.5"></path><circle cx="50" cy="26" r="2.4" fill="#f6d873"></circle><circle cx="56" cy="24" r="1.6" fill="#f6d873"></circle></svg>
+        <p style="font-size:13px;letter-spacing:3px;text-transform:uppercase;color:#b8860b;font-weight:600;margin:0;">Sabores de Ocosingo</p>
+      </div>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-weight:700;font-size:clamp(32px,5vw,56px);line-height:1;margin:0 0 22px;color:#1d4d18;">La Ruta del Queso Bola</h2>
+      <p style="font-size:17px;line-height:1.8;color:#4a5530;margin:0 0 18px;">Ocosingo es la cuna del legendario <strong>queso bola</strong>, una doble esfera de origen artesanal: una corteza de queso firme que envuelve un corazón cremoso. Es Indicación Geográfica protegida y el orgullo gastronómico de la región.</p>
+      <p style="font-size:17px;line-height:1.8;color:#4a5530;margin:0 0 26px;">Recorra las queserías familiares de la ruta, conozca el proceso tradicional y lleve a casa un trozo de Chiapas. Con gusto le orientamos sobre los mejores productores.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <div style="flex:1;min-width:150px;background:#fff;border:1px solid #ecd98c;border-radius:10px;padding:18px;"><p style="margin:0 0 4px;font-weight:700;color:#1d4d18;">Doble esfera</p><p style="margin:0;font-size:14px;color:#6b7547;line-height:1.5;">Corteza de queso, corazón cremoso.</p></div>
+        <div style="flex:1;min-width:150px;background:#fff;border:1px solid #ecd98c;border-radius:10px;padding:18px;"><p style="margin:0 0 4px;font-weight:700;color:#1d4d18;">Artesanal</p><p style="margin:0;font-size:14px;color:#6b7547;line-height:1.5;">Queserías familiares de la región.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RESTAURANTE TEASER ============ -->
+<section style="position:relative;background:#2f8f22;color:#fff;">
+  <div style="max-width:1240px;margin:0 auto;padding:clamp(48px,7vw,84px) clamp(16px,4vw,40px);display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;">
+    <div style="max-width:560px;">
+      <p style="font-size:13px;letter-spacing:3px;text-transform:uppercase;color:#FFCE1F;font-weight:600;margin:0 0 12px;">Restaurante · 07:00 – 22:30</p>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-weight:700;font-size:clamp(30px,4.5vw,48px);line-height:1.05;margin:0 0 14px;">Desayunos chiapanecos y antojitos caseros</h2>
+      <p style="font-size:17px;line-height:1.7;color:rgba(255,255,255,0.9);margin:0;">Desde la Especialidad de la Casa hasta enchiladas chiapanecas, club sandwiches y café de la región. Empiece el día como en casa.</p>
+    </div>
+    <a href="Restaurante.dc.html" style="background:#FFCE1F;color:#1d4d18;font-weight:700;padding:16px 34px;border-radius:999px;font-size:17px;display:inline-flex;align-items:center;gap:10px;box-shadow:0 10px 26px rgba(0,0,0,0.2);white-space:nowrap;" style-hover="background:#ffd84d;transform:translateY(-2px);">Ver el menú completo
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+    </a>
+  </div>
+</section>
+
+<!-- ============ RESERVAR / CONTACTO ============ -->
+<section id="reservar" style="max-width:1240px;margin:0 auto;padding:clamp(56px,8vw,100px) clamp(16px,4vw,40px);">
+  <div style="text-align:center;margin-bottom:48px;">
+    <p style="font-size:13px;letter-spacing:3px;text-transform:uppercase;color:#2f8f22;font-weight:600;margin:0 0 10px;">Reserve su estancia</p>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(30px,4.5vw,48px);color:#1d4d18;margin:0;">Reservar y contacto</h2>
+  </div>
+  <div id="contacto" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:34px;align-items:start;">
+    <div style="background:#fff;border:1px solid rgba(47,143,34,0.16);border-radius:14px;padding:clamp(24px,4vw,40px);box-shadow:0 12px 30px rgba(0,0,0,0.06);">
+      <h3 style="font-family:'Cormorant Garamond',serif;font-weight:700;font-size:26px;color:#1d4d18;margin:0 0 6px;">Solicite su reservación</h3>
+      <p style="font-size:14px;color:#6b7547;margin:0 0 24px;">Complete sus datos y le confirmamos al instante por WhatsApp.</p>
+      <label style="display:block;font-size:13px;font-weight:600;color:#3a5226;margin-bottom:6px;">Nombre completo</label>
+      <input value="{{ nombre }}" onInput="{{ onNombre }}" placeholder="Su nombre" style="width:100%;padding:13px 15px;border:1px solid #d6ddc6;border-radius:9px;font-size:15px;font-family:inherit;margin-bottom:18px;background:#FBF7EA;">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:18px;">
+        <div><label style="display:block;font-size:13px;font-weight:600;color:#3a5226;margin-bottom:6px;">Llegada</label><input type="date" value="{{ llegada }}" onInput="{{ onLlegada }}" style="width:100%;padding:13px 15px;border:1px solid #d6ddc6;border-radius:9px;font-size:15px;font-family:inherit;background:#FBF7EA;"></div>
+        <div><label style="display:block;font-size:13px;font-weight:600;color:#3a5226;margin-bottom:6px;">Salida</label><input type="date" value="{{ salida }}" onInput="{{ onSalida }}" style="width:100%;padding:13px 15px;border:1px solid #d6ddc6;border-radius:9px;font-size:15px;font-family:inherit;background:#FBF7EA;"></div>
+      </div>
+      <label style="display:block;font-size:13px;font-weight:600;color:#3a5226;margin-bottom:6px;">Huéspedes</label>
+      <select value="{{ huespedes }}" onChange="{{ onHuespedes }}" style="width:100%;padding:13px 15px;border:1px solid #d6ddc6;border-radius:9px;font-size:15px;font-family:inherit;margin-bottom:18px;background:#FBF7EA;">
+        <option value="1">1 huésped</option><option value="2">2 huéspedes</option><option value="3">3 huéspedes</option><option value="4">4 huéspedes</option><option value="5+">5 o más</option>
+      </select>
+      <label style="display:block;font-size:13px;font-weight:600;color:#3a5226;margin-bottom:6px;">Notas (opcional)</label>
+      <textarea value="{{ notas }}" onInput="{{ onNotas }}" placeholder="Tipo de habitación, hora de llegada, tarifa para grupos…" rows="3" style="width:100%;padding:13px 15px;border:1px solid #d6ddc6;border-radius:9px;font-size:15px;font-family:inherit;margin-bottom:22px;background:#FBF7EA;resize:vertical;"></textarea>
+      <a href="{{ waReservaLink }}" target="_blank" style="display:flex;align-items:center;justify-content:center;gap:10px;background:#2f8f22;color:#fff;font-weight:700;padding:16px;border-radius:999px;font-size:16px;" style-hover="background:#267a1c;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.8 14.04c-.24.68-1.42 1.31-1.96 1.36-.5.05-1.14.07-1.84-.12-.42-.13-.97-.31-1.67-.61-2.94-1.27-4.86-4.23-5.01-4.43-.15-.2-1.2-1.6-1.2-3.05s.76-2.16 1.03-2.46c.27-.3.59-.37.79-.37.2 0 .39.002.56.01.18.008.42-.07.66.5.24.58.82 2 .89 2.15.07.15.12.32.02.51-.1.2-.15.32-.3.49-.15.18-.31.39-.44.53-.15.15-.3.31-.13.6.17.3.76 1.25 1.63 2.02 1.12.99 2.06 1.3 2.36 1.45.3.15.47.12.65-.07.18-.2.75-.87.95-1.17.2-.3.4-.25.66-.15.27.1 1.7.8 1.99.95.3.15.5.22.57.34.07.12.07.7-.17 1.38z"></path></svg>
+        Enviar por WhatsApp
+      </a>
+    </div>
+    <div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:18px;">
+        <a href="tel:9196730280" style="background:#fff;border:1px solid rgba(47,143,34,0.16);border-radius:12px;padding:20px;display:block;" style-hover="border-color:#2f8f22;">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2f8f22" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:10px;"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"></path></svg>
+          <p style="margin:0;font-size:12px;color:#6b7547;font-weight:600;text-transform:uppercase;letter-spacing:1px;">Teléfono</p>
+          <p style="margin:3px 0 0;font-weight:700;color:#1d4d18;font-size:17px;">919 673 0280</p>
+        </a>
+        <a href="https://wa.me/5219191093359" target="_blank" style="background:#fff;border:1px solid rgba(47,143,34,0.16);border-radius:12px;padding:20px;display:block;" style-hover="border-color:#2f8f22;">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="#2f8f22" style="margin-bottom:10px;"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.8 14.04c-.24.68-1.42 1.31-1.96 1.36-.5.05-1.14.07-1.84-.12-.42-.13-.97-.31-1.67-.61-2.94-1.27-4.86-4.23-5.01-4.43-.15-.2-1.2-1.6-1.2-3.05s.76-2.16 1.03-2.46c.27-.3.59-.37.79-.37.2 0 .39.002.56.01.18.008.42-.07.66.5.24.58.82 2 .89 2.15.07.15.12.32.02.51-.1.2-.15.32-.3.49-.15.18-.31.39-.44.53-.15.15-.3.31-.13.6.17.3.76 1.25 1.63 2.02 1.12.99 2.06 1.3 2.36 1.45.3.15.47.12.65-.07.18-.2.75-.87.95-1.17.2-.3.4-.25.66-.15.27.1 1.7.8 1.99.95.3.15.5.22.57.34.07.12.07.7-.17 1.38z"></path></svg>
+          <p style="margin:0;font-size:12px;color:#6b7547;font-weight:600;text-transform:uppercase;letter-spacing:1px;">WhatsApp</p>
+          <p style="margin:3px 0 0;font-weight:700;color:#1d4d18;font-size:17px;">919 109 3359</p>
+        </a>
+        <a href="mailto:hotelmargarita@live.com.mx" style="grid-column:span 2;background:#fff;border:1px solid rgba(47,143,34,0.16);border-radius:12px;padding:20px;display:flex;align-items:center;gap:14px;" style-hover="border-color:#2f8f22;">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2f8f22" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex:0 0 auto;"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m2 7 10 6 10-6"></path></svg>
+          <div><p style="margin:0;font-size:12px;color:#6b7547;font-weight:600;text-transform:uppercase;letter-spacing:1px;">Correo</p><p style="margin:3px 0 0;font-weight:700;color:#1d4d18;font-size:16px;">hotelmargarita@live.com.mx</p></div>
+        </a>
+      </div>
+      <div style="position:relative;border-radius:12px;overflow:hidden;border:1px solid rgba(47,143,34,0.16);box-shadow:0 12px 30px rgba(0,0,0,0.06);">
+        <iframe title="Ubicación Hotel Margarita" src="https://www.google.com/maps?q=Hotel+Margarita+Ocosingo+Chiapas&amp;output=embed&amp;z=16" style="width:100%;height:300px;border:0;display:block;" loading="lazy"></iframe>
+        <a href="https://maps.app.goo.gl/YmjhbVgPBoe6c74s5" target="_blank" style="position:absolute;top:12px;right:12px;background:#fff;color:#1d4d18;font-weight:700;font-size:13px;padding:9px 14px;border-radius:999px;box-shadow:0 4px 12px rgba(0,0,0,0.2);display:inline-flex;align-items:center;gap:7px;" style-hover="background:#FFCE1F;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          Cómo llegar
+        </a>
+      </div>
+      <p style="display:flex;align-items:center;gap:8px;color:#5c6b3f;font-size:15px;margin:16px 0 0;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2f8f22" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+        Ocosingo, Chiapas, México
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer style="background:#1d4d18;color:rgba(251,247,234,0.8);">
+  <div style="max-width:1240px;margin:0 auto;padding:clamp(48px,7vw,72px) clamp(16px,4vw,40px) 36px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:40px;">
+    <div>
+      <img src="assets/logo-blanco.png" alt="Hotel Margarita" style="width:230px;max-width:100%;display:block;margin-bottom:16px;">
+      <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;color:#FFCE1F;margin:0;">“Permítanos atenderle como si estuviera en casa”</p>
+    </div>
+    <div>
+      <h4 style="color:#fff;font-size:15px;letter-spacing:1px;text-transform:uppercase;margin:0 0 16px;">Explorar</h4>
+      <div style="display:flex;flex-direction:column;gap:10px;font-size:15px;">
+        <a href="#habitaciones" style-hover="color:#FFCE1F;">Habitaciones</a>
+        <a href="#servicios" style-hover="color:#FFCE1F;">Servicios</a>
+        <a href="#galeria" style-hover="color:#FFCE1F;">Galería</a>
+        <a href="#tonina" style-hover="color:#FFCE1F;">Zona arqueológica Toniná</a>
+        <a href="#queso" style-hover="color:#FFCE1F;">Ruta del Queso Bola</a>
+        <a href="Restaurante.dc.html" style-hover="color:#FFCE1F;">Restaurante</a>
+      </div>
+    </div>
+    <div>
+      <h4 style="color:#fff;font-size:15px;letter-spacing:1px;text-transform:uppercase;margin:0 0 16px;">Contacto</h4>
+      <div style="display:flex;flex-direction:column;gap:10px;font-size:15px;">
+        <a href="tel:9196730280" style-hover="color:#FFCE1F;">Tel. 919 673 0280</a>
+        <a href="https://wa.me/5219191093359" target="_blank" style-hover="color:#FFCE1F;">WhatsApp 919 109 3359</a>
+        <a href="mailto:hotelmargarita@live.com.mx" style-hover="color:#FFCE1F;">hotelmargarita@live.com.mx</a>
+        <span>Ocosingo, Chiapas, México</span>
+      </div>
+      <div style="display:flex;gap:12px;margin-top:18px;">
+        <a href="https://wa.me/5219191093359" target="_blank" aria-label="WhatsApp" style="width:40px;height:40px;border-radius:50%;background:rgba(251,247,234,0.1);display:flex;align-items:center;justify-content:center;" style-hover="background:#FFCE1F;color:#1d4d18;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.8 14.04c-.24.68-1.42 1.31-1.96 1.36-.5.05-1.14.07-1.84-.12-.42-.13-.97-.31-1.67-.61-2.94-1.27-4.86-4.23-5.01-4.43-.15-.2-1.2-1.6-1.2-3.05s.76-2.16 1.03-2.46c.27-.3.59-.37.79-.37.2 0 .39.002.56.01.18.008.42-.07.66.5.24.58.82 2 .89 2.15.07.15.12.32.02.51-.1.2-.15.32-.3.49-.15.18-.31.39-.44.53-.15.15-.3.31-.13.6.17.3.76 1.25 1.63 2.02 1.12.99 2.06 1.3 2.36 1.45.3.15.47.12.65-.07.18-.2.75-.87.95-1.17.2-.3.4-.25.66-.15.27.1 1.7.8 1.99.95.3.15.5.22.57.34.07.12.07.7-.17 1.38z"></path></svg>
+        </a>
+        <a href="#" aria-label="Facebook" style="width:40px;height:40px;border-radius:50%;background:rgba(251,247,234,0.1);display:flex;align-items:center;justify-content:center;" style-hover="background:#FFCE1F;color:#1d4d18;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-2 0-3.5 1.5-3.5 3.5V11H8v3h2.5v7h3v-7H16l.5-3h-3V9.5c0-.3.2-.5.5-.5z"></path></svg>
+        </a>
+        <a href="#" aria-label="Instagram" style="width:40px;height:40px;border-radius:50%;background:rgba(251,247,234,0.1);display:flex;align-items:center;justify-content:center;" style-hover="background:#FFCE1F;color:#1d4d18;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div style="border-top:1px solid rgba(251,247,234,0.15);padding:20px;text-align:center;font-size:13px;color:rgba(251,247,234,0.55);">© 2026 Hotel Margarita · Ocosingo, Chiapas · Más que un hotel… es como estar en casa.</div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = {
+    idxTon: 0, idxQueso: 0, idxHab: 0,
+    nombre: '', llegada: '', salida: '', huespedes: '2', notas: ''
+  };
+  TON_N = 4; QUE_N = 3; HAB_N = 4;
+
+  componentDidMount() {
+    this._timer = setInterval(() => {
+      this.setState(s => ({
+        idxTon: (s.idxTon + 1) % this.TON_N,
+        idxQueso: (s.idxQueso + 1) % this.QUE_N,
+      }));
+    }, 5000);
+  }
+  componentWillUnmount() { clearInterval(this._timer); }
+
+  set = (k) => (e) => this.setState({ [k]: e.target.value });
+  step = (k, n, d) => () => this.setState(s => ({ [k]: (s[k] + d + n) % n }));
+  go = (k, i) => () => this.setState({ [k]: i });
+
+  renderVals() {
+    const s = this.state;
+    const track = (i) => 'display:flex;transition:transform .55s cubic-bezier(.4,0,.2,1);transform:translateX(' + (-i * 100) + '%);';
+    const dot = (active) => 'appearance:none;border:none;cursor:pointer;height:10px;border-radius:999px;padding:0;transition:all .3s ease;' + (active ? 'width:28px;background:#FFCE1F;' : 'width:10px;background:rgba(150,150,150,.45);');
+    const dotL = (active) => 'appearance:none;border:none;cursor:pointer;height:10px;border-radius:999px;padding:0;transition:all .3s ease;' + (active ? 'width:28px;background:#2f8f22;' : 'width:10px;background:#cdd6bd;');
+
+    const msg =
+      'Hola Hotel Margarita, me gustaria reservar.%0A' +
+      'Nombre: ' + (s.nombre || '-') + '%0A' +
+      'Llegada: ' + (s.llegada || '-') + '%0A' +
+      'Salida: ' + (s.salida || '-') + '%0A' +
+      'Huespedes: ' + s.huespedes + '%0A' +
+      'Notas: ' + (s.notas || '-');
+
+    return {
+      // Toniná carousel
+      tonTrack: track(s.idxTon),
+      prevTon: this.step('idxTon', this.TON_N, -1), nextTon: this.step('idxTon', this.TON_N, 1),
+      goTon0: this.go('idxTon', 0), goTon1: this.go('idxTon', 1), goTon2: this.go('idxTon', 2), goTon3: this.go('idxTon', 3),
+      tonDot0: dotL(s.idxTon === 0), tonDot1: dotL(s.idxTon === 1), tonDot2: dotL(s.idxTon === 2), tonDot3: dotL(s.idxTon === 3),
+      // Queso carousel
+      queTrack: track(s.idxQueso),
+      prevQue: this.step('idxQueso', this.QUE_N, -1), nextQue: this.step('idxQueso', this.QUE_N, 1),
+      goQue0: this.go('idxQueso', 0), goQue1: this.go('idxQueso', 1), goQue2: this.go('idxQueso', 2),
+      queDot0: dotL(s.idxQueso === 0), queDot1: dotL(s.idxQueso === 1), queDot2: dotL(s.idxQueso === 2),
+      // Habitaciones carousel
+      habTrack: track(s.idxHab),
+      prevHab: this.step('idxHab', this.HAB_N, -1), nextHab: this.step('idxHab', this.HAB_N, 1),
+      goHab0: this.go('idxHab', 0), goHab1: this.go('idxHab', 1), goHab2: this.go('idxHab', 2), goHab3: this.go('idxHab', 3),
+      habDot0: dotL(s.idxHab === 0), habDot1: dotL(s.idxHab === 1), habDot2: dotL(s.idxHab === 2), habDot3: dotL(s.idxHab === 3),
+      // Form
+      nombre: s.nombre, llegada: s.llegada, salida: s.salida, huespedes: s.huespedes, notas: s.notas,
+      onNombre: this.set('nombre'), onLlegada: this.set('llegada'), onSalida: this.set('salida'),
+      onHuespedes: this.set('huespedes'), onNotas: this.set('notas'),
+      waReservaLink: 'https://wa.me/5219191093359?text=' + msg,
+    };
+  }
+}
+</script>
+</body>
+</html>

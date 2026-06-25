@@ -1,0 +1,237 @@
+{
+  "sitio": {
+    "nombre": "Hotel Margarita",
+    "tipo": "Hotel tradicional y acogedor",
+    "lema": "Permítanos atenderle como si estuviera en casa",
+    "lemaSecundario": "Más que un hotel… es como estar en casa",
+    "ubicacionCorta": "Ocosingo, Chiapas, México",
+    "idioma": "es",
+    "tipografias": {
+      "titulos": "Cormorant Garamond",
+      "cuerpo": "Hanken Grotesk"
+    }
+  },
+
+  "contacto": {
+    "telefono": "919 673 0280",
+    "telefonoLink": "tel:9196730280",
+    "whatsapp": "919 109 3359",
+    "whatsappLink": "https://wa.me/5219191093359",
+    "correo": "hotelmargarita@live.com.mx",
+    "direccion": "Ocosingo, Chiapas, México",
+    "googleMaps": "https://maps.app.goo.gl/YmjhbVgPBoe6c74s5",
+    "redes": {
+      "facebook": "PENDIENTE — agregar URL real",
+      "instagram": "PENDIENTE — agregar URL real",
+      "whatsapp": "https://wa.me/5219191093359"
+    }
+  },
+
+  "hero": {
+    "eyebrow": "Ocosingo · Chiapas",
+    "logo": "assets/logo-blanco.png",
+    "lema": "Permítanos atenderle como si estuviera en casa",
+    "descripcion": "Un hotel tradicional y acogedor en el corazón de Ocosingo. Habitaciones cómodas, atención cálida y todo lo que necesita para descansar como en casa.",
+    "imagen": "assets/edificio.png",
+    "badge": { "valor": "24 hrs", "texto": "Recepción abierta" },
+    "botones": [
+      { "texto": "Reservar ahora", "destino": "#reservar" },
+      { "texto": "WhatsApp", "destino": "https://wa.me/5219191093359" }
+    ]
+  },
+
+  "bienvenida": {
+    "titulo": "Más que un hotel… es como estar en casa",
+    "texto": "¿Su viaje es por placer, diversión o trabajo? Permítanos convertirlo en una experiencia inolvidable. Disfrute de instalaciones limpias, habitaciones cómodas y confortables, y un trato familiar que hará de su estancia un verdadero descanso. Pregunte por nuestra tarifa especial para grupos."
+  },
+
+  "habitaciones": {
+    "nota": "Las fotos de cada habitación las sube el usuario en los recuadros del carrusel.",
+    "tipos": [
+      {
+        "nombre": "Habitación Sencilla",
+        "etiqueta": "Para uno",
+        "descripcion": "Una cama individual, ideal para viajeros de trabajo. Cómoda, limpia y con todo lo necesario para una buena noche de descanso.",
+        "amenidades": ["WiFi", "Agua caliente", "T.V. por cable", "Ventilador / A.C.", "Baño privado"],
+        "tarifa": "PENDIENTE — definir precio o 'consultar'",
+        "foto": "PENDIENTE (slot: hab-sencilla)"
+      },
+      {
+        "nombre": "Habitación Doble",
+        "etiqueta": "Hasta dos",
+        "descripcion": "Dos camas individuales, perfecta para compañeros de viaje o amigos. Espacio amplio y confortable.",
+        "amenidades": ["2 camas", "WiFi", "Agua caliente", "T.V. por cable", "Ventilador / A.C."],
+        "tarifa": "PENDIENTE",
+        "foto": "PENDIENTE (slot: hab-doble)"
+      },
+      {
+        "nombre": "Habitación Matrimonial",
+        "etiqueta": "Para parejas",
+        "descripcion": "Una cama matrimonial en un ambiente cálido y acogedor. Ideal para parejas que buscan comodidad y tranquilidad.",
+        "amenidades": ["Cama matrimonial", "WiFi", "Agua caliente", "T.V. por cable", "Ventilador / A.C."],
+        "tarifa": "PENDIENTE",
+        "foto": "PENDIENTE (slot: hab-matrimonial)"
+      },
+      {
+        "nombre": "Habitación Familiar",
+        "etiqueta": "Familias y grupos",
+        "descripcion": "Varias camas para familias o grupos de viaje. Pregunte por nuestra tarifa especial para grupos.",
+        "amenidades": ["Tarifa para grupos", "Varias camas", "WiFi", "Agua caliente"],
+        "tarifa": "Tarifa especial para grupos — consultar",
+        "foto": "PENDIENTE (slot: hab-grupos)"
+      }
+    ]
+  },
+
+  "servicios": {
+    "destacados": [
+      { "nombre": "Amplio estacionamiento", "descripcion": "Espacio seguro y cómodo para su vehículo dentro del hotel." },
+      { "nombre": "Recepción 24 horas", "descripcion": "Le atendemos a cualquier hora, llegue cuando llegue." }
+    ],
+    "lista": [
+      "Agua caliente",
+      "WiFi en todo el hotel",
+      "T.V. por cable",
+      "Servicio de despertador",
+      "Ventilador de techo",
+      "Aire acondicionado",
+      "Servicio de taxis",
+      "Room service (mañanas)",
+      "Restaurante",
+      "Servicio de lavandería",
+      "Caja de seguridad",
+      "Consulta médica"
+    ],
+    "otrosDelTriptico": [
+      "Servicio de Lada Nacional e Internacional",
+      "Servicio de Fax",
+      "Servicio Postal"
+    ]
+  },
+
+  "galeria": {
+    "nota": "Mosaico de fotos. La fachada es real; el resto son recuadros que sube el usuario.",
+    "imagenes": [
+      { "id": "fachada", "fuente": "assets/edificio.png", "estado": "cargada" },
+      { "id": "gal-hab1", "descripcion": "Foto de habitación", "estado": "PENDIENTE" },
+      { "id": "gal-hab2", "descripcion": "Foto de habitación", "estado": "PENDIENTE" },
+      { "id": "gal-lobby", "descripcion": "Foto del lobby", "estado": "PENDIENTE" },
+      { "id": "gal-pasillo", "descripcion": "Foto de pasillo", "estado": "PENDIENTE" },
+      { "id": "gal-bano", "descripcion": "Foto de baño", "estado": "PENDIENTE" }
+    ]
+  },
+
+  "tonina": {
+    "eyebrow": "Qué visitar · Ocosingo",
+    "titulo": "Zona arqueológica de Toniná",
+    "parrafos": [
+      "A pocos minutos del hotel se alza Toniná, una de las grandes ciudades mayas de Chiapas. Su imponente acrópolis se eleva más de 70 metros sobre el valle, escalonada en siete plataformas con templos, plazas y palacios excavados en la ladera.",
+      "Famosa por sus estelas, esculturas y el célebre Mural de las Cuatro Eras, Toniná fue una potencia militar maya. Una visita imprescindible durante su estancia en Ocosingo."
+    ],
+    "datos": [
+      { "valor": "+70 m", "texto": "de altura" },
+      { "valor": "7", "texto": "plataformas" },
+      { "valor": "≈14 km", "texto": "desde el hotel" }
+    ],
+    "carrusel": [
+      { "fuente": "assets/tonina1.png", "leyenda": "Vista aérea de la acrópolis" },
+      { "fuente": "assets/tonina2.png", "leyenda": "Las siete plataformas escalonadas" },
+      { "fuente": "assets/tonina-estela.png", "leyenda": "Estelas y esculturas mayas" },
+      { "fuente": "assets/tonina3.png", "leyenda": "Recorra la zona arqueológica" }
+    ]
+  },
+
+  "quesoBola": {
+    "eyebrow": "Sabores de Ocosingo",
+    "titulo": "La Ruta del Queso Bola",
+    "parrafos": [
+      "Ocosingo es la cuna del legendario queso bola, una doble esfera de origen artesanal: una corteza de queso firme que envuelve un corazón cremoso. Es Indicación Geográfica protegida y el orgullo gastronómico de la región.",
+      "Recorra las queserías familiares de la ruta, conozca el proceso tradicional y lleve a casa un trozo de Chiapas. Con gusto le orientamos sobre los mejores productores."
+    ],
+    "puntos": [
+      { "titulo": "Doble esfera", "texto": "Corteza de queso, corazón cremoso." },
+      { "titulo": "Artesanal", "texto": "Queserías familiares de la región." }
+    ],
+    "carrusel": [
+      { "fuente": "assets/queso1.png", "leyenda": "Queso bola fresco, listo para llevar" },
+      { "fuente": "assets/queso2.png", "leyenda": "Corteza firme y corazón cremoso" },
+      { "fuente": "assets/ruta-queso-mapa.png", "leyenda": "Mapa de la Ruta del Queso de Bola" }
+    ]
+  },
+
+  "restaurante": {
+    "pagina": "Restaurante.dc.html",
+    "horario": "07:00 am – 10:30 pm",
+    "paquetesIncluyen": "Café, té o leche, jugo de naranja o fruta, pan, chilaquiles, frijoles refritos y plátanos fritos.",
+    "moneda": "MXN",
+    "desayunos": [
+      { "nombre": "Especialidad de la Casa", "precio": 100, "descripcion": "Dos huevos estrellados montados sobre sincronizadas y bañados en salsa blanca.", "especial": true },
+      { "nombre": "Desayuno Americano", "precio": 70, "descripcion": "Dos huevos revueltos con chorizo, mexicana, jamón, longaniza, tocino o salchicha." },
+      { "nombre": "Desayuno a Caballo", "precio": 120, "descripcion": "Dos huevos estrellados sobre bistec o cecina a la plancha." },
+      { "nombre": "Desayuno a la Veracruzana", "precio": 80, "descripcion": "Huevos revueltos envueltos en tortilla de maíz, bañados con crema de frijol, crema, chorizo o longaniza y tiras de jalapeño." },
+      { "nombre": "Torta Especial", "precio": 65, "descripcion": "Tortillas de huevo, jamón, queso al gratín, salsa o ketchup." },
+      { "nombre": "Chilaquiles Rojos o Verdes", "precio": 80, "descripcion": "Con huevos estrellados, chorizo, tocino o pollo, aguacate, crema y gratinados con queso." },
+      { "nombre": "Divorciados", "precio": 75, "descripcion": "Huevos estrellados bañados con salsa roja y verde." },
+      { "nombre": "Desayuno Mexicano", "precio": 110, "descripcion": "Puntas de filete de res a la mexicana." },
+      { "nombre": "Desayuno del Campo", "precio": 80, "descripcion": "Dos huevos estrellados o revueltos, acompañados de tres quesadillas de maíz o harina." },
+      { "nombre": "Huevos Motuleños", "precio": 90, "descripcion": "Huevos estrellados sobre tostadas, salsa ranchera, jamón, chícharos, crema, queso y aguacate." },
+      { "nombre": "Norteño con Machaca", "precio": 90, "descripcion": "Huevos con machaca y salsa mexicana." },
+      { "nombre": "Desayuno Oaxaqueño", "precio": 75, "descripcion": "Dos huevos revueltos con salsa mexicana, aguacate, crema y quesillo." },
+      { "nombre": "Omelet", "precio": 85, "descripcion": "Champiñones, chorizo, longaniza o jamón con queso sobre un espejo de salsa verde." },
+      { "nombre": "Enchiladas Chiapanecas", "precio": 80, "descripcion": "Suizas o tres sabores, rellenas de pollo, plátano y quesillo, con salsa verde, roja o mole." },
+      { "nombre": "Entomatadas o Enfrijoladas (3)", "precio": 80 },
+      { "nombre": "Hot Cakes o Pan Francés (3)", "precio": 60, "descripcion": "Mantequilla, mermelada, miel y fruta." },
+      { "nombre": "Ensalada de Fruta", "precio": 90, "descripcion": "Fruta de temporada, amaranto, arándanos, yogurt, granola, miel." },
+      { "nombre": "Quesadillas Combinadas (4) o Sincronizada Especial (1)", "precio": 80, "descripcion": "Incluye guacamole, frijoles y pico de gallo." },
+      { "nombre": "Desayuno Continental", "precio": 60, "descripcion": "Pan tostado o pan francés, mantequilla, mermelada y miel." }
+    ],
+    "antojitos": [
+      { "nombre": "Club Sandwich", "precio": 65, "descripcion": "Acompañado de papas fritas, guacamole o ensalada rusa." },
+      { "nombre": "Sandwich Gratinados (2)", "precio": 55, "descripcion": "Rellenos de jamón o pollo." },
+      { "nombre": "Sandwich", "precio": 40, "descripcion": "Jamón, pollo o tinga." },
+      { "nombre": "Hamburguesa con Papas", "precio": 65, "descripcion": "Clásica, con guarnición de papas a la francesa." },
+      { "nombre": "Molletes Mixtos o Sencillos", "precio": 65, "descripcion": "Sobre pan, con frijol, queso gratinado y pico de gallo." },
+      { "nombre": "Tortas", "precio": 55, "descripcion": "Jamón, pollo o tinga." },
+      { "nombre": "Quesadillas Combinadas (4)", "precio": 65, "descripcion": "Champiñones, chorizo, jamón y tinga." },
+      { "nombre": "Quesadillas Sencillas (4)", "precio": 50, "descripcion": "De queso, en tortilla de maíz o harina." },
+      { "nombre": "Sincronizada de la Casa", "precio": 70, "descripcion": "Champiñones, chorizo, jamón y tinga." },
+      { "nombre": "Tostadas (3)", "precio": 75, "descripcion": "Pollo, res o tinga." },
+      { "nombre": "Empanadas o Tacos Dorados (4)", "precio": 50, "descripcion": "Pollo, res o tinga." },
+      { "nombre": "Tacos Suaves (4)", "precio": 50, "descripcion": "Pollo, res, puerco y chorizo." },
+      { "nombre": "Flautas (3)", "precio": 60, "descripcion": "Pollo o res." }
+    ],
+    "bebidas": {
+      "calientes": [
+        { "nombre": "Café americano", "precio": 18 },
+        { "nombre": "Café descafeinado", "precio": 15 },
+        { "nombre": "Café con leche", "precio": 25 },
+        { "nombre": "Capuchino", "precio": 30 },
+        { "nombre": "Expreso", "precio": 25 },
+        { "nombre": "Chocolate caliente", "precio": 30 },
+        { "nombre": "Chocomilk", "precio": 30 },
+        { "nombre": "Té", "precio": 15 }
+      ],
+      "frias": [
+        { "nombre": "Licuados con leche (fruta de temporada)", "precio": 40 },
+        { "nombre": "Agua de fruta de temporada", "precio": 20 },
+        { "nombre": "Agua embotellada", "precio": 15 },
+        { "nombre": "Refrescos embotellados", "precio": 25 },
+        { "nombre": "Agua mineral", "precio": 20 }
+      ]
+    }
+  },
+
+  "reservar": {
+    "metodo": "Formulario que arma un mensaje de WhatsApp con: nombre, llegada, salida, huéspedes y notas.",
+    "campos": ["nombre", "llegada", "salida", "huespedes", "notas"],
+    "destinoWhatsApp": "https://wa.me/5219191093359"
+  },
+
+  "pendientes": [
+    "Subir fotos reales de habitaciones (4 slots), lobby, pasillo y baño (galería).",
+    "Definir tarifas por tipo de habitación (o dejar 'consultar').",
+    "Agregar URLs reales de Facebook e Instagram.",
+    "Confirmar fotos de los platillos del restaurante si se quieren mostrar.",
+    "Confirmar horario del restaurante (tríptico dice 07:00–22:30 / menú dice 07:00–22:30)."
+  ]
+}

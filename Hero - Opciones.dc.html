@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>*{box-sizing:border-box;}body{margin:0;font-family:'Hanken Grotesk',system-ui,sans-serif;}</style>
+</helmet>
+
+<div style="min-width:100%;min-height:100vh;box-sizing:border-box;padding:48px;background:#e7e5df;">
+  <h1 style="font-family:'Cormorant Garamond',serif;font-size:34px;color:#1d2410;margin:0 0 6px;">Hero — 3 estilos para elegir</h1>
+  <p style="color:#5c6150;margin:0 0 40px;font-size:15px;max-width:640px;">Tres direcciones para la portada del Hotel Margarita. Dígame cuál prefiere (o qué mezclar) y la aplico a la página principal.</p>
+
+  <div style="display:flex;flex-direction:column;gap:48px;align-items:flex-start;">
+
+  <!-- ===== OPCIÓN A: Editorial dividido ===== -->
+  <div style="width:1120px;max-width:100%;">
+    <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#5c6150;margin:0 0 10px;">Opción A · Editorial dividido <span style="color:#9aa088;font-weight:500;text-transform:none;letter-spacing:0;">— actual en la página principal</span></p>
+    <div style="background:#fff;border-radius:2px;box-shadow:0 1px 3px rgba(0,0,0,.08);overflow:hidden;">
+      <section style="position:relative;background:#1d4d18;color:#FBF7EA;overflow:hidden;">
+        <svg viewBox="0 0 100 100" width="460" height="460" aria-hidden="true" style="position:absolute;top:-130px;right:-120px;opacity:0.07;"><g fill="#fff"><ellipse cx="50" cy="23" rx="6" ry="19"/><ellipse cx="50" cy="23" rx="6" ry="19" transform="rotate(45 50 50)"/><ellipse cx="50" cy="23" rx="6" ry="19" transform="rotate(90 50 50)"/><ellipse cx="50" cy="23" rx="6" ry="19" transform="rotate(135 50 50)"/><ellipse cx="50" cy="23" rx="6" ry="19" transform="rotate(180 50 50)"/><ellipse cx="50" cy="23" rx="6" ry="19" transform="rotate(225 50 50)"/><ellipse cx="50" cy="23" rx="6" ry="19" transform="rotate(270 50 50)"/><ellipse cx="50" cy="23" rx="6" ry="19" transform="rotate(315 50 50)"/></g><circle cx="50" cy="50" r="13" fill="#FFCE1F"/></svg>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;padding:64px 56px;position:relative;">
+          <div>
+            <p style="font-size:12px;letter-spacing:3px;text-transform:uppercase;color:#FFD84D;font-weight:600;margin:0 0 16px;">Ocosingo · Chiapas</p>
+            <h2 style="font-family:'Cormorant Garamond',serif;font-weight:700;font-size:72px;line-height:0.98;margin:0 0 18px;color:#fff;">Hotel<br>Margarita</h2>
+            <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:24px;color:#FFCE1F;margin:0 0 26px;">“Permítanos atenderle como si estuviera en casa”</p>
+            <div style="display:flex;gap:12px;"><span style="background:#FFCE1F;color:#1d4d18;font-weight:700;padding:13px 26px;border-radius:999px;font-size:15px;">Reservar ahora</span><span style="border:1.5px solid rgba(251,247,234,0.5);color:#FBF7EA;font-weight:600;padding:13px 24px;border-radius:999px;font-size:15px;">WhatsApp</span></div>
+          </div>
+          <div style="position:relative;">
+            <div style="background:#FBF7EA;padding:12px;border-radius:6px;box-shadow:0 24px 48px rgba(0,0,0,0.35);transform:rotate(-1.5deg);"><img src="assets/edificio.png" style="width:100%;height:300px;object-fit:cover;border-radius:3px;display:block;"></div>
+            <div style="position:absolute;bottom:-20px;left:-20px;background:#2f8f22;color:#fff;padding:14px 18px;border-radius:6px;transform:rotate(2deg);"><p style="margin:0;font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:700;line-height:1;">24 hrs</p><p style="margin:3px 0 0;font-size:11px;letter-spacing:1px;text-transform:uppercase;opacity:0.85;">Recepción</p></div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- ===== OPCIÓN B: Full-bleed fotográfico ===== -->
+  <div style="width:1120px;max-width:100%;">
+    <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#5c6150;margin:0 0 10px;">Opción B · Foto a sangre completa</p>
+    <div style="background:#fff;border-radius:2px;box-shadow:0 1px 3px rgba(0,0,0,.08);overflow:hidden;">
+      <section style="position:relative;height:560px;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;">
+        <img src="assets/edificio.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(29,77,24,0.55),rgba(29,77,24,0.82));"></div>
+        <div style="position:relative;color:#fff;padding:0 40px;">
+          <svg viewBox="0 0 100 100" width="64" height="64" style="margin:0 auto 22px;display:block;"><g fill="#fff"><ellipse cx="50" cy="23" rx="6" ry="19"/><ellipse cx="50" cy="23" rx="6" ry="19" transform="rotate(30 50 50)"/><ellipse cx="50" cy="23" rx="6" ry="19" transform="rotate(60 50 50)"/><ellipse cx="50" cy="23" rx="6" ry="19" transform="rotate(90 50 50)"/><ellipse cx="50" cy="23" rx="6" ry="19" transform="rotate(120 50 50)"/><ellipse cx="50" cy="23" rx="6" ry="19" transform="rotate(150 50 50)"/><ellipse cx="50" cy="23" rx="6" ry="19" transform="rotate(180 50 50)"/><ellipse cx="50" cy="23" rx="6" ry="19" transform="rotate(210 50 50)"/><ellipse cx="50" cy="23" rx="6" ry="19" transform="rotate(240 50 50)"/><ellipse cx="50" cy="23" rx="6" ry="19" transform="rotate(270 50 50)"/><ellipse cx="50" cy="23" rx="6" ry="19" transform="rotate(300 50 50)"/><ellipse cx="50" cy="23" rx="6" ry="19" transform="rotate(330 50 50)"/></g><circle cx="50" cy="50" r="13" fill="#2f8f22"/><circle cx="50" cy="50" r="9" fill="#FFCE1F"/></svg>
+          <p style="font-size:13px;letter-spacing:4px;text-transform:uppercase;color:#FFD84D;font-weight:600;margin:0 0 14px;">Ocosingo · Chiapas</p>
+          <h2 style="font-family:'Cormorant Garamond',serif;font-weight:700;font-size:88px;line-height:0.95;margin:0 0 16px;">Hotel Margarita</h2>
+          <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:26px;color:#FFE9A0;margin:0 0 30px;">“Permítanos atenderle como si estuviera en casa”</p>
+          <span style="background:#FFCE1F;color:#1d4d18;font-weight:700;padding:15px 34px;border-radius:999px;font-size:16px;">Reservar ahora</span>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- ===== OPCIÓN C: Botánico / patrón ===== -->
+  <div style="width:1120px;max-width:100%;">
+    <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#5c6150;margin:0 0 10px;">Opción C · Botánico, claro y elegante</p>
+    <div style="background:#fff;border-radius:2px;box-shadow:0 1px 3px rgba(0,0,0,.08);overflow:hidden;">
+      <section style="position:relative;background:#FBF7EA;text-align:center;padding:30px 40px 64px;overflow:hidden;">
+        <!-- top daisy border -->
+        <div style="display:flex;justify-content:center;gap:24px;opacity:0.9;margin-bottom:30px;">
+          <svg viewBox="0 0 100 100" width="34" height="34"><g fill="#2f8f22"><ellipse cx="50" cy="25" rx="7" ry="20"/><ellipse cx="50" cy="25" rx="7" ry="20" transform="rotate(45 50 50)"/><ellipse cx="50" cy="25" rx="7" ry="20" transform="rotate(90 50 50)"/><ellipse cx="50" cy="25" rx="7" ry="20" transform="rotate(135 50 50)"/><ellipse cx="50" cy="25" rx="7" ry="20" transform="rotate(180 50 50)"/><ellipse cx="50" cy="25" rx="7" ry="20" transform="rotate(225 50 50)"/><ellipse cx="50" cy="25" rx="7" ry="20" transform="rotate(270 50 50)"/><ellipse cx="50" cy="25" rx="7" ry="20" transform="rotate(315 50 50)"/></g><circle cx="50" cy="50" r="11" fill="#FFCE1F"/></svg>
+          <svg viewBox="0 0 100 100" width="44" height="44"><g fill="#FFCE1F"><ellipse cx="50" cy="25" rx="7" ry="20"/><ellipse cx="50" cy="25" rx="7" ry="20" transform="rotate(45 50 50)"/><ellipse cx="50" cy="25" rx="7" ry="20" transform="rotate(90 50 50)"/><ellipse cx="50" cy="25" rx="7" ry="20" transform="rotate(135 50 50)"/><ellipse cx="50" cy="25" rx="7" ry="20" transform="rotate(180 50 50)"/><ellipse cx="50" cy="25" rx="7" ry="20" transform="rotate(225 50 50)"/><ellipse cx="50" cy="25" rx="7" ry="20" transform="rotate(270 50 50)"/><ellipse cx="50" cy="25" rx="7" ry="20" transform="rotate(315 50 50)"/></g><circle cx="50" cy="50" r="11" fill="#2f8f22"/></svg>
+          <svg viewBox="0 0 100 100" width="34" height="34"><g fill="#2f8f22"><ellipse cx="50" cy="25" rx="7" ry="20"/><ellipse cx="50" cy="25" rx="7" ry="20" transform="rotate(45 50 50)"/><ellipse cx="50" cy="25" rx="7" ry="20" transform="rotate(90 50 50)"/><ellipse cx="50" cy="25" rx="7" ry="20" transform="rotate(135 50 50)"/><ellipse cx="50" cy="25" rx="7" ry="20" transform="rotate(180 50 50)"/><ellipse cx="50" cy="25" rx="7" ry="20" transform="rotate(225 50 50)"/><ellipse cx="50" cy="25" rx="7" ry="20" transform="rotate(270 50 50)"/><ellipse cx="50" cy="25" rx="7" ry="20" transform="rotate(315 50 50)"/></g><circle cx="50" cy="50" r="11" fill="#FFCE1F"/></svg>
+        </div>
+        <p style="font-size:13px;letter-spacing:4px;text-transform:uppercase;color:#2f8f22;font-weight:600;margin:0 0 18px;">Ocosingo · Chiapas · desde siempre</p>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:84px;line-height:0.95;margin:0 0 10px;color:#1d4d18;">Hotel Margarita</h2>
+        <div style="width:80px;height:2px;background:#FFCE1F;margin:0 auto 22px;"></div>
+        <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:27px;color:#3a5226;margin:0 auto 16px;max-width:560px;">“Permítanos atenderle como si estuviera en casa”</p>
+        <p style="font-size:16px;color:#5c6b3f;max-width:520px;margin:0 auto 30px;line-height:1.7;">Un hotel tradicional y acogedor en el corazón de Ocosingo. Descanse como en casa.</p>
+        <div style="display:flex;gap:12px;justify-content:center;"><span style="background:#2f8f22;color:#fff;font-weight:700;padding:14px 30px;border-radius:999px;font-size:15px;">Reservar ahora</span><span style="border:1.5px solid #2f8f22;color:#2f8f22;font-weight:600;padding:14px 28px;border-radius:999px;font-size:15px;">Ver servicios</span></div>
+      </section>
+    </div>
+  </div>
+
+  </div>
+</div>
+</x-dc>
+</body>
+</html>
